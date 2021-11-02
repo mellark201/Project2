@@ -39,7 +39,10 @@ variable:
 	IDENTIFIER ':' type IS statement_ ;
 
 parameters:
-	variable | variable ',' parameters ;
+	parameter | parameter ',' parameters ;
+
+parameter:
+	IDENTIFIER ':' type ;
 
 type:
 	INTEGER |
