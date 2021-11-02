@@ -29,7 +29,7 @@ function:
 	function_header optional_variable body ;
 	
 function_header:	
-	FUNCTION IDENTIFIER RETURNS type ';' ;
+	FUNCTION IDENTIFIER parameters RETURNS type ';' ;
 
 optional_variable:
 	variable |
@@ -37,6 +37,9 @@ optional_variable:
 
 variable:
 	IDENTIFIER ':' type IS statement_ ;
+
+parameters:
+	variable | variable ',' parameters ;
 
 type:
 	INTEGER |
